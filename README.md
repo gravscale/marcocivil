@@ -1,5 +1,5 @@
 # projeto Marco Civil para Provedores de Aplicacões
-Este é um projeto colaborativo com informações e tutoriais de como implementar a Lei 12965/2014 - Marco Civil em servidores brasileiros, em diferentes servicos
+Este é um projeto colaborativo com informações e tutoriais de como implementar a [Lei 12965/2014](http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm) - Marco Civil em servidores brasileiros, em diferentes servicos. A Lei foi regulamentada pelo [Decreto 8771/2016](http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Decreto/D8771.htm)
 
 Sinta-se a vontade para realizar um fork e enviar pull requests, iremos adicionar novos tutoriais aqui na medida em que forem surgindo
 
@@ -17,7 +17,7 @@ para quem gerencia um servidor, seja físico ou virtual ou até mesmo para quem 
 ## quem deve guardar o log?
 * se você contratou uma hospedagem compartilhada, a princípio seu provedor vai guardar os logs, exceto se você subir um serviço em uma porta que não passe pelo servidor web (apache, nginx, IIS)
 
-* se você contratou um servidor virtual / cloud ou um servidor dedicado em uma nuvem, como a da Under (www.under.com.br), AWS, Google Cloud, etc, então você mesmo deve configurar seu servidor para guardar os logs corretamente
+* se você contratou um servidor virtual / cloud ou um servidor dedicado em uma nuvem, como a da [Under](www.under.com.br), AWS, Google Cloud, etc, então você mesmo deve configurar seu servidor para guardar os logs corretamente
 
 * se você contratou um servidor 100% gerenciado, no qual você não possui acesso root / administrator, então provavelmente seu fornecedor de gerenciamento irá configurar a guarda de logs por você
 
@@ -41,8 +41,8 @@ para quem gerencia um servidor, seja físico ou virtual ou até mesmo para quem 
 * data e qual timezone
 * IP de origem, assim a justiça poderá identificar qual é o usuário 
 * porta de origem (porta que foi usada do lado do usuário), assim a justiça poderá identificar qual é o usuário
-* qual conteúdo o usuário acessou, exemplo, no caso de HTTP (https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) qual o hostname (https://en.wikipedia.org/wiki/Hostname) e a URI (https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
-* opcionalmente podemos constar o Protocolo (https://en.wikipedia.org/wiki/Transport_layer) (UDP/TCP) e a porta de destino, caso isso seja relevante
+* qual conteúdo o usuário acessou, exemplo, no caso de [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) qual o [hostname](https://en.wikipedia.org/wiki/Hostname) e a [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
+* opcionalmente podemos constar o [Protocolo](https://en.wikipedia.org/wiki/Transport_layer) (UDP/TCP) e a porta de destino, caso isso seja relevante
 
 ## quais informações não podem constar nos logs?
 * no art 16 da lei, diz que não podemos guardar logs de saída, ou seja, o que a aplicação acessa em outras aplicações de internet, ou de dados pessoais dos usuários
