@@ -40,13 +40,19 @@ para quem gerencia um servidor, seja físico ou virtual ou até mesmo para quem 
 ## quais informações tem que constar nos logs?
 * data e qual timezone
 * IP de origem, assim a justiça poderá identificar qual é o usuário 
-* porta de origem (porta que foi usada do lado do usuário), assim a justiça poderá identificar qual é o usuário
+* porta de origem (porta que foi usada do lado do usuário), assim a justiça poderá identificar qual é o usuário. Hoje em dia, com a restrição de quantidade de IPv4 provedores de acesso utilizam o mesmo IP para diversos usuário de internet, e dividem as portas de origem um range para cada cliente. Então ter certeza de qual usuário acessou o recurso somente guardando a porta de origem.
 * qual conteúdo o usuário acessou, exemplo, no caso de [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) qual o [hostname](https://en.wikipedia.org/wiki/Hostname) e a [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 * opcionalmente podemos constar o [Protocolo](https://en.wikipedia.org/wiki/Transport_layer) (UDP/TCP) e a porta de destino, caso isso seja relevante
 
 ## quais informações não podem constar nos logs?
 * no art 16 da lei, diz que não podemos guardar logs de saída, ou seja, o que a aplicação acessa em outras aplicações de internet, ou de dados pessoais dos usuários
 
+## como faço com proxy
+* pode ser guardado o log dentro do proxy
+* pode ser guardo o log dentro do servidor final, desde que o IP real e a porta real de origem seja passada para o servidor final, através, por exemplo de 
+* serviços que rodam proxy como serviço como o [Cloudflare](https://cloudflare.com) passa o IP real através da variável especifcada em https://support.cloudflare.com/hc/en-us/articles/200170986-How-does-Cloudflare-handle-HTTP-Request-headers- , nesse caso o header utilizado pode ser o CF-Connecting-IP
+* nesses casos os tutoriais desse guia não entram nesses detalhes e deve ser ajustado conforme o caso
+* no caso do Cloudflare, este não passa a porta de origem em nenhum header
 
 ## como aumento o tempo de guarda de logs do sistema operacional?
 * No linux você deve configurar o logrotate
