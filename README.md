@@ -1,5 +1,15 @@
-# projeto Marco Civil
-informações e tutoriais de como implementar a Lei 12965/2014 - Marco Civil em servidores brasileiros, em diferentes servicos
+# projeto Marco Civil para Provedores de Aplicacões
+Este é um projeto colaborativo com informações e tutoriais de como implementar a Lei 12965/2014 - Marco Civil em servidores brasileiros, em diferentes servicos
+
+Sinta-se a vontade para realizar um fork e enviar pull requests, iremos adicionar novos tutoriais aqui na medida em que forem surgindo
+
+O conteúdo é de livre distribuição, apenas pedimos que cite o endereço do github de nosso projeto original https://github.com/underinternet/marcocivil/ para que o público possa se atualizar
+
+Caso queira discutir algum ponto dessa FAQ ou do projeto participe de nosso grupo de discussões
+https://groups.google.com/forum/#!forum/marco-civil-aplicacoes
+
+
+# FAQ Marco Civil para Provedores de Aplicacões
 
 ## para quem é esse projeto no github?
 para quem gerencia um servidor, seja físico ou virtual ou até mesmo para quem cria aplicações de internet
@@ -22,17 +32,26 @@ para quem gerencia um servidor, seja físico ou virtual ou até mesmo para quem 
 * sim, pois o artigo 15 fala em guardar em ambiente seguro
 
 ## é preferível guardar os logs fora do servidor?
-* sim, pois assim separa as funções do servidor, como no caso de servidor virtual stateless, na qual se deseja aumentar ou reduzir o número de vms, ou então para não precisar realizar backup do servidor em vm stateless. Podemos sugerir algumas técnicas como:
-** enviar os logs para storage NAS (NFS, CIFS)
-** utilizar um concentrador de logs como o Elasticsearch
-** enviar os logs periodicamente para Object Storage
+* sim, pois assim separa as funções do servidor, como no caso de servidor virtual stateless, na qual se deseja aumentar ou reduzir o número de vms, ou então para não precisar realizar backup do servidor em vm stateless. Podemos sugerir algumas técnicas como
+  * enviar os logs para storage NAS (NFS, CIFS)
+  * utilizar um concentrador de logs como o Elasticsearch
+  * enviar os logs periodicamente para Object Storage
 
 ## quais informações tem que constar nos logs?
+* data e qual timezone
+* IP de origem, assim a justiça poderá identificar qual é o usuário 
+* porta de origem (porta que foi usada do lado do usuário), assim a justiça poderá identificar qual é o usuário
+* qual conteúdo o usuário acessou, exemplo, no caso de HTTP (https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) qual o hostname (https://en.wikipedia.org/wiki/Hostname) e a URI (https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
+* opcionalmente podemos constar o Protocolo (https://en.wikipedia.org/wiki/Transport_layer) (UDP/TCP) e a porta de destino, caso isso seja relevante
 
 ## quais informações não podem constar nos logs?
+* no art 16 da lei, diz que não podemos guardar logs de saída, ou seja, o que a aplicação acessa em outras aplicações de internet, ou de dados pessoais dos usuários
+
 
 ## como aumento o tempo de guarda de logs do sistema operacional?
 * No linux você deve configurar o logrotate
 * No windows server você deve configurar o event viewer para não apagar os logs
 
+## onde encontro os tutoriais
+* Cada arquivo txt é um tutorial para um serviço. Iniciaremos com os serviços mais comuns como Apache, Nginx, IIS, etc, e iremos adicionando novos serviços na medida em que o projeto for crescendo ou recebamos colaborações.
 
