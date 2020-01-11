@@ -61,3 +61,6 @@ para quem gerencia um servidor, seja físico ou virtual ou até mesmo para quem 
 ## onde encontro os tutoriais
 * Cada arquivo txt é um tutorial para um serviço. Iniciaremos com os serviços mais comuns como Apache, Nginx, IIS, etc, e iremos adicionando novos serviços na medida em que o projeto for crescendo ou recebamos colaborações.
 
+
+# Referências 
+* https://gtergts.nic.br/files/apresentacao/arquivo/217/06-MarcoCivil-AplicacoesPraticas.pdf
