@@ -1,13 +1,13 @@
 = Tutorial para configuração do Nginx para o Marco Civil =
 
 == Campos que serão armazenados ==
-* data
-* timezone
 * IP de origem
 * porta de origem
-* [hostname](https://en.wikipedia.org/wiki/Hostname)
-* HTTP ou HTTPS
-* [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
+* data
+* timezone
+* protocolo
+* hostname
+* uri
 
 == Configuração no serviço ==
 
