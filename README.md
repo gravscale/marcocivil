@@ -1,4 +1,4 @@
-# Projeto Marco Civil para Provedores de Aplicacões
+# Tutoriais de configuração de Logs Marco Civil para Provedores de Aplicacões
 Este é um projeto colaborativo com informações e tutoriais de como implementar a [Lei 12965/2014](http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/l12965.htm) - Marco Civil em servidores brasileiros, em diferentes servicos. A Lei foi regulamentada pelo [Decreto 8771/2016](http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Decreto/D8771.htm)
 
 Sinta-se a vontade para realizar um fork e enviar pull requests, iremos adicionar novos tutoriais aqui na medida em que forem surgindo
