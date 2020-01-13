@@ -29,7 +29,7 @@ server {
 
 == Rotacionamento de Logs ==
 
-Configure o logrotato (no Ubuntu é /etc/logrotate.d/nginx) da seguinte forma:
+Configure o logrotate (no Ubuntu é /etc/logrotate.d/nginx) da seguinte forma:
 
 /var/log/nginx/*.log {
   rotate 52
