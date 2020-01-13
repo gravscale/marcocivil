@@ -10,6 +10,7 @@ https://groups.google.com/forum/#!forum/marco-civil-aplicacoes
 
 # Tutoriais
 * [Nginx](http-nginx.md)
+* [Apache](http-apache.md)
 
 # FAQ Marco Civil para Provedores de Aplicacões
 
