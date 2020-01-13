@@ -1,6 +1,6 @@
-= Tutorial para configuração do Nginx para o Marco Civil =
+# Tutorial para configuração do Nginx para o Marco Civil
 
-== Campos que serão armazenados ==
+## Campos que serão armazenados
 * IP de origem
 * porta de origem
 * data
@@ -9,32 +9,35 @@
 * hostname
 * uri
 
-== Configuração no serviço ==
-
+## Configuração no serviço
 Coloque dentro da sessão http:
 
+```
 http {
   log_format marcocivil '$remote_addr $remote_port - $remote_user [$time_local] '
   '$scheme $host '
   '"$request" $status $body_bytes_sent '
   '"$http_referer" "$http_user_agent"';
+```
                  
              
 Agora dentro da sessão server, configure o log para:
 
+```
 server {
   access_log /var/log/nginx/access.log marcocivil;
+```
 
-
-
-== Rotacionamento de Logs ==
+## Rotacionamento de Logs
 
 Configure o logrotate (no Ubuntu é /etc/logrotate.d/nginx) da seguinte forma:
 
+```
 /var/log/nginx/*.log {
   rotate 52
   weekly
 }
+```
 
 Tiramos a opcao daily e colocamos a opcao weekly, assim teremos 52 arquivos no ano
 
