@@ -66,3 +66,4 @@ para quem gerencia um servidor, seja físico ou virtual ou até mesmo para quem 
 
 # Referências 
 * https://gtergts.nic.br/files/apresentacao/arquivo/217/06-MarcoCivil-AplicacoesPraticas.pdf
+* https://wiki.brasilpeeringforum.org/w/Log_de_Portas_de_Origem_em_Servidores_Web
