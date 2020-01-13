@@ -9,8 +9,8 @@ Caso queira discutir algum ponto dessa FAQ ou do projeto participe de nosso grup
 https://groups.google.com/forum/#!forum/marco-civil-aplicacoes
 
 # Tutoriais
-* [Nginx](http-nginx.md)
-* [Apache](http-apache.md)
+* [Nginx](http-nginx.txt)
+* [Apache](http-apache.txt)
 
 # FAQ Marco Civil para Provedores de Aplicacões
 
